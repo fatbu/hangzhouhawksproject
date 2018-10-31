@@ -29,7 +29,7 @@
 	</tr>
 </table>
 </p>
-<button id='edit'>Toggle edit</button>
+<button id='edit'>Edit</button>
 <br/>
 <input type='text' value='example'><br>
 <input type='text'><br>
@@ -54,6 +54,11 @@
 	$('input').prop('disabled',true)
 	$('#edit').click(function(){
 		$('input').prop('disabled',toggle)
+		if(toggle){
+			$('#edit').html('Edit')
+		}else{
+			$('#edit').html('Save')
+		}
 		toggle = !toggle
 	})
 	
