@@ -1,6 +1,13 @@
 <html>
 <head>
-	<title>schedule</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<title>schedule</title><meta charset="utf-8" />
+	<style>
+		span {
+			display:none;
+		}
+	</style>
+		
 </head>
 
 <body>
@@ -21,15 +28,40 @@
 		<td>5 days left!</td>
 	</tr>
 </table>
-
-<br/> 
-6:00 Chinese
+</p>
+<button id='edit'>Edit</button>
 <br/>
-7:00 Math
+<input type='text' value='example'><br>
+<input type='text'><br>
+<input type='text'><br>
+<input type='text'><br>
+<input type='text'><br>
+<!-- <br/>
+<input/>
+<span>7:00 Math</span>
 <br/>
-12:00 Science
+<input/>
+<span>12:00 Science</span>
 <br/>
-1:00 English
+<input/>
+<span>1:00 English</span>
 <br/>
-3:00 Chinese
- 
+<input/>
+<span>2:00 Chinese</span>
+<button>Edit</button> -->
+<script>
+	let toggle = false
+	$('input').prop('disabled',true)
+	$('#edit').click(function(){
+		$('input').prop('disabled',toggle)
+		if(toggle){
+			$('#edit').html('Edit')
+		}else{
+			$('#edit').html('Save')
+		}
+		toggle = !toggle
+	})
+	
+</script>
+</body>
+</html>
