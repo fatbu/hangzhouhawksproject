@@ -1,6 +1,8 @@
 <html>
 <head>
 	<title> My study group </title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js'></script>
 	<link rel="stylesheet" type="text/css" href="studygroup.css" /><meta charset="utf-8" />
 </head>
 
@@ -39,7 +41,18 @@
 <p>
 <b> <font size="5" color="#282B87"> Forum/Chat </font></b>
 <br/>
-nicholas will do this part
+<textarea cols=50 rows=10 disabled></textarea><br>
+<form><input type='text' size=50></form>
+<script>
+	let socket = io('http://10.0.32.72:3000')
+	socket.on('welcome', (message) => console.log(message))
+	socket.on('message', (message) => $('textarea').append(message))
+	$('form').submit(function(event){
+		socket.emit('message',$('form > input').val())
+		$('form > input').val('')
+		return false
+	})
+</script>
 </p>
 </div>
 
