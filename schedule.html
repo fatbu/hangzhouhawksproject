@@ -12,6 +12,13 @@
 		table{
 			padding: 10px;
 		}
+		.main{
+			text-align:center;
+		}
+		input{
+			padding:5px;
+			margin:10px;
+		}
 	</style>
 		<link rel="stylesheet" type="text/css" href="global.css">
 		
@@ -19,6 +26,9 @@
 </head>
 
 <body>
+	<div class='back' style='position:float,top:0px'>
+		<a href='index.html'>back to home</a>
+	</div>
 <p>
 <table border="1" align="center">
 	<tr>
@@ -28,14 +38,16 @@
 	</tr>
 </table>
 </p>
+<div class='main'>
 <p>
 <h1>June 22<sup>nd</sup></h1>
 <br/>
-<table>
+<!-- <table>
 	<tr>
 		<td>5 days left!</td>
 	</tr>
-</table>
+</table> -->
+5 days left!
 </p>
 <button id='edit'>Edit</button>
 <br/>
@@ -46,7 +58,7 @@
 <input type='text'><br>
 <input type='text'><br>
 </div>
-
+</div>
 <script>
 	let toggle = false
 	$('#schedule > input').prop('disabled',true)
