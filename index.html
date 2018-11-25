@@ -1,35 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title align="center">
-淘淘学宝
-</title>
-<meta charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="global.css">
-<style>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title align="center"> 淘淘学宝 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <style>
 	.top{
 		position: float;
 		top: 0;
 		text-align: right;
 	}
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navbar li {
+    float: left;
+
+    vertical-align: middle;
+
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#navbar li a:hover {
+    background-color: #111;
+}
 </style>
-</head>
-<body>
-	<div class='top'>
-		<a href=''>log in</a>
-	</div>
-<h1 align="center"><b>淘淘学宝</b></h1>
-<p>
-<table border="1" align="center">
-<tr>
-	<td><a href='schedule.html'>my schedule</a></td>
-</tr>
-<tr>
-	<td><a href='myexams.html'>my exams</a></td>
-</tr>
-<tr>
-	<td><a href='studygroup.html'>my study group</a></td>
-</tr>
-</p>
-</body>
+  </head>
+  <body>
+    <div id="navbar">
+      <ul>
+        <li><a style="padding:0px" href="index.html"><img
+              style="border-radius: 50%; margin: 5px; width: 35px;
+              height: 35px;" src="logo2.png" alt="logo"></a> </li>
+        <li><a href="schedule.html">my schedule</a></li>
+        <li><a href="myexams.html">my exams</a></li>
+        <li><a href="studygroup.html">my study group</a></li>
+        <li style="float:right"><a href="">log in</a></li>
+      </ul>
+    </div>
+    <h1 align="center"><b>淘淘学宝</b></h1>
+    <p align="center">E-learning for China<br>
+    </p>
+    <p> </p>
+    <div align="center"><img style="border-radius: 50%;" src="logo2.png"
+        alt="logo" width="198" height="201"><br>
+      <br>
+      <a href="">about us</a><br>
+      <br>
+      <a href="">create an account</a><br>
+    </div>
+  </body>
 </html>

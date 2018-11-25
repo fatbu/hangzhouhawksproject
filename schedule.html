@@ -1,8 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-	<title>schedule</title><meta charset="utf-8" />
-	<style>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="fullcalendar/fullcalendar.css">
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/moment.min.js"></script>
+    <script src="fullcalendar/fullcalendar.js"></script>
+    <title>schedule</title>
+    <meta charset="utf-8">
+    <style>
 		span {
 			display:none;
 		}
@@ -19,62 +25,62 @@
 			padding:5px;
 			margin:10px;
 		}
-	</style>
-		<link rel="stylesheet" type="text/css" href="global.css">
-		
-		
-</head>
+#navbar ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
 
-<body>
-	<div class='back' style='position:float,top:0px'>
-		<a href='index.html'>back to home</a>
-	</div>
-<p>
-<table border="1" align="center">
-	<tr>
-		<td><button>Daily</button></td>
-		<td><button>Weekly</button></td>
-		<td><button>Monthly</button></td>
-	</tr>
-</table>
-</p>
-<div class='main'>
-<p>
-<h1>June 22<sup>nd</sup></h1>
-<br/>
-<!-- <table>
-	<tr>
-		<td>5 days left!</td>
-	</tr>
-</table> -->
-5 days left!
-</p>
-<button id='edit'>Edit</button>
-<br/>
-<div id='schedule'>
-<input type='time'><input type='text' value='example'><br>
-<input type='time'><input type='text'><br>
-<input type='time'><input type='text'><br>
-<input type='time'><input type='text'><br>
-<input type='time'><input type='text'><br>
-</div>
-</div>
-<script>
-	let toggle = false
-	$('#schedule > input').prop('disabled',true)
-	$('#edit').click(function(){
-		$('#schedule > input').prop('disabled',toggle)
-		if(toggle){
-			$('#edit').html('Edit')
-		}else{
-			$('#edit').html('Save')
-			$('#schedule > input').each(function(){
-				
-			})
-		}
-		toggle = !toggle
-	})
-	
+#navbar li {
+float: left;
+
+vertical-align: middle;
+
+}
+
+#navbar li a {
+display: block;
+color: white;
+text-align: center;
+padding: 15px;
+text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#navbar li a:hover {
+background-color: #111;
+}
+	</style>
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <script>
+$(function() {
+
+// page is now ready, initialize the calendar...
+
+$('#calendar').fullCalendar({
+// put your options and callbacks here
+})
+console.log('test')
+});
 </script>
-</body>
+  </head>
+  <body>
+
+    <div id="navbar">
+      <ul>
+        <li><a style="padding:0px" href="index.html"><img
+              style="border-radius: 50%; margin: 5px; width: 35px;
+              height: 35px;" src="logo2.png" alt="logo"></a> </li>
+        <li><a href="schedule.html">my schedule</a></li>
+        <li><a href="myexams.html">my exams</a></li>
+        <li><a href="studygroup.html">my study group</a></li>
+        <li style="float:right"><a href="">log in</a></li>
+      </ul>
+    </div><br><br>
+          <div id='calendar'></div>
+    <p><br>
+    </p>
+  </body>
 </html>
